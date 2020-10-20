@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <style type="text/css">
+    nav{
+        border:aqua solid 1px;
+    }
+    nav a:hover{
+            color: green;
+    }
+        nav a{
+            text-decoration: none;
+            color:black;
+            font-size:50px;
+        }
+        .article_title{
+            border: aqua dashed 1px;
+            width: 500px;height: 400px;
+            background-color: rgb(254,242,81);
+            margin-bottom: 10px;
+            margin-top:100px ;
+        }
+        .article_title:hover{
+            background-color: lightskyblue;
+        }
+        .article_title p{
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+<br>
+<nav id="top">
+    <a href="/">首页</a>
+    &nbsp;&nbsp;
+    <a href="/edit">写文章</a>
+</nav>
+<!--article-->
+{% for articles in article %}
+    <div id="box_{{articles.pk}}" class="article_title" onclick="window.open('/article/{{articles.pk}}');">
+        <p>{{articles.title}}</p>
+    </div>
+{% endfor %}
+</body>
+</html>

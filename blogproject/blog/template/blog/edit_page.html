@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编写我的博客</title>
+</head>
+<body>
+<form action="{% url 'blog:edit_action' %}" method="post">
+    {% csrf_token %}
+    <label>标题：
+        <input type="text" name="title">
+    </label>
+    <br>
+    内容：
+    <br>
+    <label>
+        <textarea cols="60" rows="6" name="context"></textarea>
+    </label>
+    <br>
+    <label>
+        <input type="submit" value="提交" onclick="window.open('/');">
+    </label>
+
+</form>
+</body>
+</html>
