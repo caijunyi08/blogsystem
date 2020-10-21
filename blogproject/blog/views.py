@@ -5,7 +5,7 @@ from django.http import HttpResponse
 def index(request):
     articles = Article.objects.all().order_by('time')
     return render(request,'blog/index.html',context={
-        'title':'blog home page',
+        'title':'博客首页',
         'article':articles,
     })
 def articles_page(request,article_id):
