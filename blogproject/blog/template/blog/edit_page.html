@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>编写我的博客</title>
+    <title>write my blog</title>
 </head>
 <body>
 <form action="{% url 'blog:edit_action' %}" method="post">
     {% csrf_token %}
-    <label>标题：
+    <label>title:
         <input type="text" name="title">
     </label>
     <br>
-    内容：
+    content:
     <br>
     <label>
         <textarea cols="60" rows="6" name="context"></textarea>
