@@ -1,6 +1,7 @@
 # blogsystem
 a blog system use django
 
+new vision: [click here](http://github.com/icaijy/junyi08.com/)
 中文文档 Chinese document: 点击[此处](https://github.com/icaijy/blogsystem/tree/chiness)
 # How to run
 open terminal, use command ```cd``` cd to blogproject folder.Run command:
